@@ -1,7 +1,8 @@
 import { Vector3 } from 'three';
-import * as THREE from '../node_modules/three/build/three.module.js';
-import { OrbitControls } from '../node_modules/three/examples/jsm/controls/OrbitControls.js';
-// import { OrbitControls } from '../js/OrbitControls.js'
+// import * as THREE from '../node_modules/three/build/three.module.js';
+import * as THREE from '../js/three.module.js'
+// import { OrbitControls } from '../node_modules/three/examples/jsm/controls/OrbitControls.js';
+import { OrbitControls } from '../js/OrbitControls.js'
 
 
 let camera, controls, scene, renderer, leader;
