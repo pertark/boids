@@ -3,6 +3,7 @@ import { Vector3 } from 'three';
 import * as THREE from '../js/three.module.js'
 // import { OrbitControls } from '../node_modules/three/examples/jsm/controls/OrbitControls.js';
 import { OrbitControls } from '../js/OrbitControls.js'
+import { VRButton } from 'three/examples/jsm/webxr/VRButton.js';
 
 
 let camera, controls, scene, renderer, leader;
@@ -280,5 +281,13 @@ function keepWithinBounds(boid) {
 function render() {
 
   renderer.render( scene, camera );
-
+	
+  document.body.appendChild( VRButton.createButton( renderer ) );
+  renderer.xr.enabled = true;
 }
+
+renderer.setAnimationLoop( function () {
+
+  renderer.render( scene, camera );
+
+} );
